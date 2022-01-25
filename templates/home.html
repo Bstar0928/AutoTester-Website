@@ -1,0 +1,99 @@
+{% extends 'site_template.html' %}
+
+{% block body %}
+<div id="page-wrapper">
+    <div class="container-fluid" style="min-height: 90vh;">
+
+        <!-- Page Heading -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">
+                    Welcome <small>to C progamming Test</small>
+                </h1>
+                <ol class="breadcrumb">
+                    <li class="active">
+                        <i class="fa fa-dashboard"></i> Home
+                    </li>
+                </ol>
+            </div>
+        </div>
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <ul class=flashes>
+            {% for message in messages %}
+            <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        {% endwith %}
+        <div class="row">
+            <div class="col-lg-6 col-md-6">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <div class="row">
+                            <div class="col-xs-3">
+                                <i class="fa fa-comments fa-3x"></i>
+                            </div>
+                            <div class="col-xs-9 text-right">
+                                <div>C Programming!</div>
+                            </div>
+                        </div>
+                    </div>     
+                    <div class="panel-body">
+                        <div class="panel-heading">
+                            <i class="fa fa-edit"></i>  10 Advantages Of The C Programming Language
+                        </div>
+                        <div class="form-data">
+                            1. Powerful and efficient language.<br>
+                            2. Portable language.<br>
+                            3. Built-in functions.<br>
+                            4. Quality to extend itself.<br>
+                            5. Open-source.<br>
+                            6. Structured programming language.<br>
+                            7. Middle-level language.<br>
+                            8. Implementation of algorithms and data structures.<br>
+                            9. Procedural programming language<br>
+                            10.Dynamic memory allocation                                
+                        </div>
+                        
+                    </div>                       
+                    <div class="panel-footer">
+                        <a href="/score">
+                        <span class="pull-left" class="m">View Your Score</span>
+                        </a>
+                        <a href="/submit">
+                            <span class="pull-right">Go to Test</span>
+                        </a>
+                        <div class="clearfix"></div>
+                    </div>
+                    </div>
+            </div>
+            <div class="col-lg-6 col-md-6">
+                <div class="panel panel-green">
+                    <div class="panel-heading">
+                        <div class="row">
+                            <div class="col-xs-2">
+                                <i class="fa fa-tasks fa-3x"></i>
+                            </div>
+                            <div class="col-xs-10 text-left">
+                                <div><h4>Rule</h4></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <div>
+                            <p>You must send your result in zip file.</p>
+                            If the time is less than deadline of assignment, there is no penalty.<br>
+                            If the time is within 24 hours there is penalty of 30%. If the time is within 48 hours there is penalty of 50%.<br>
+                            If the time is within 72 hours there is penalty of 70%.<br>
+                            Greater than 72 hours it is penalty of 100%.<br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /.container-fluid -->
+</div>
+<!-- /#page-wrapper -->
+{% endblock %}
